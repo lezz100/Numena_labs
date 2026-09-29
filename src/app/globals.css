@@ -1,0 +1,361 @@
+@import "tailwindcss";
+
+:root {
+  /* Color: one dark, mineral family with a single action accent. */
+  --canvas: #12140f;
+  --surface: #181b15;
+  --surface-elevated: #20241c;
+  --foreground: #f2f2ea;
+  --muted: #b3b7aa;
+  --border: #363a31;
+  --border-strong: #4a5042;
+  --accent: #b7c87c;
+  --accent-hover: #c7d791;
+  --accent-foreground: #18200d;
+  --error: #ec7c72;
+  --success: #9bc18d;
+  --focus: #d4e7a0;
+
+  /* Compatibility aliases for the current application during migration. */
+  --background: var(--canvas);
+  --surface-hover: var(--surface-elevated);
+  --primary: var(--accent);
+  --primary-hover: var(--accent-hover);
+  --secondary: var(--surface-elevated);
+  --accent-soft: #dfe8bb;
+
+  /* Spacing follows a practical 4px base rhythm. */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1.25rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4.5rem;
+  --space-8: 7rem;
+  --space-section: clamp(4.5rem, 8vw, 7rem);
+  --page-gutter: clamp(1.25rem, 4vw, 3rem);
+  --content-max: 90rem;
+  --content-narrow: 48rem;
+
+  /* A compact, almost-square shape language. */
+  --radius-none: 0;
+  --radius-control-value: 0.25rem;
+  --radius-panel-value: 0.25rem;
+
+  /* Semantic type roles. Space Grotesk remains supplied by next/font. */
+  --type-display: clamp(3rem, 6vw, 5.75rem);
+  --type-h1: clamp(2.5rem, 4.8vw, 4.5rem);
+  --type-h2: clamp(2rem, 3.4vw, 3.25rem);
+  --type-h3: clamp(1.35rem, 2vw, 1.75rem);
+  --type-body-large: 1.125rem;
+  --type-body: 1rem;
+  --type-body-small: 0.875rem;
+  --type-label: 0.8125rem;
+  --type-metadata: 0.75rem;
+  --leading-display: 0.98;
+  --leading-heading: 1.05;
+  --leading-body: 1.6;
+  --tracking-display: -0.045em;
+  --tracking-heading: -0.03em;
+  --tracking-label: 0.015em;
+}
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-soft: var(--accent-soft);
+  --color-error: var(--error);
+  --color-success: var(--success);
+  --color-focus: var(--focus);
+
+  --spacing-1: var(--space-1);
+  --spacing-2: var(--space-2);
+  --spacing-3: var(--space-3);
+  --spacing-4: var(--space-4);
+  --spacing-5: var(--space-5);
+  --spacing-6: var(--space-6);
+  --spacing-7: var(--space-7);
+  --spacing-8: var(--space-8);
+  --radius-control: var(--radius-control-value);
+  --radius-panel: var(--radius-panel-value);
+
+  --font-sans: var(--font-space-grotesk);
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+html {
+  background: var(--canvas);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 0;
+  background: var(--canvas);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+
+a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:not([class]) {
+  color: var(--accent);
+  text-decoration-line: underline;
+}
+
+a:not([class]):hover {
+  color: var(--accent-hover);
+}
+
+.type-display,
+.type-h1,
+.type-h2,
+.type-h3 {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.type-display {
+  font-size: var(--type-display);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
+}
+
+.type-h1 {
+  font-size: var(--type-h1);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-display);
+}
+
+.type-h2 {
+  font-size: var(--type-h2);
+  line-height: 1.1;
+  letter-spacing: var(--tracking-heading);
+}
+
+.type-h3 {
+  font-size: var(--type-h3);
+  line-height: 1.2;
+  letter-spacing: var(--tracking-heading);
+}
+
+.type-body-large {
+  font-size: var(--type-body-large);
+  line-height: 1.55;
+}
+
+.type-body {
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+}
+
+.type-body-small {
+  font-size: var(--type-body-small);
+  line-height: 1.55;
+}
+
+.type-label,
+.type-metadata,
+.type-mono {
+  font-family: var(--font-mono);
+  letter-spacing: var(--tracking-label);
+}
+
+.type-label {
+  font-size: var(--type-label);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.type-metadata,
+.type-mono {
+  font-size: var(--type-metadata);
+  line-height: 1.45;
+}
+
+@keyframes homepage-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes photo-breathe {
+  from {
+    transform: scale(1.02);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes workflow-signal {
+  0%,
+  16% {
+    left: 0;
+    opacity: 0;
+  }
+
+  38% {
+    opacity: 1;
+  }
+
+  72%,
+  100% {
+    left: calc(100% - 0.625rem);
+    opacity: 0;
+  }
+}
+
+@keyframes workflow-rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.homepage-reveal {
+  animation: homepage-reveal 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-visual::after,
+.case-study-image::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  pointer-events: none;
+  background: rgb(18 20 15 / 0.44);
+}
+
+.hero-photo,
+.case-study-photo {
+  animation: photo-breathe 14s ease-in-out infinite alternate;
+  filter: saturate(0.68) contrast(1.06) brightness(0.72);
+}
+
+.hero-signal {
+  position: absolute;
+  z-index: 2;
+  top: 26%;
+  right: 12%;
+  left: 12%;
+  height: 1px;
+  background: rgb(183 200 124 / 0.48);
+}
+
+.hero-signal::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0.625rem;
+  height: 0.625rem;
+  content: "";
+  background: var(--accent);
+  box-shadow: 0 0 0 0.25rem rgb(183 200 124 / 0.15);
+  transform: translateY(-50%);
+  animation: workflow-signal 5s ease-in-out infinite;
+}
+
+.hero-workflow {
+  animation: workflow-rise 800ms 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-reveal {
+    transition:
+      opacity 700ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms),
+      transform 700ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms);
+  }
+
+  .scroll-reveal[data-ready="true"] {
+    opacity: 0;
+  }
+
+  .scroll-reveal--up[data-ready="true"] {
+    transform: translateY(2rem);
+  }
+
+  .scroll-reveal--left[data-ready="true"] {
+    transform: translateX(-2.5rem);
+  }
+
+  .scroll-reveal--right[data-ready="true"] {
+    transform: translateX(2.5rem);
+  }
+
+  .scroll-reveal[data-revealed="true"] {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .scroll-stagger[data-ready="true"] .scroll-stagger-item {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+
+  .scroll-stagger[data-revealed="true"] .scroll-stagger-item {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      opacity 500ms ease-out,
+      transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: calc(var(--stagger-index) * 55ms + 120ms);
+  }
+}
+
+@media (max-width: 639px) {
+  :root {
+    --page-gutter: 1.25rem;
+    --space-section: 4.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
