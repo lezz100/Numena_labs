@@ -7,6 +7,11 @@ export type ResultMetric = {
   placeholder: "[NEEDS REAL DATA]";
 };
 
+export type CaseStudyScreenshot = {
+  src: string;
+  alt: string;
+};
+
 export type CaseStudy = {
   slug: string;
   name: string;
@@ -23,6 +28,7 @@ export type CaseStudy = {
   features: string[];
   results: ResultMetric[];
   resultsPublished: boolean;
+  screenshots?: CaseStudyScreenshot[];
 };
 
 export const caseStudies: CaseStudy[] = [

@@ -292,7 +292,8 @@ export function Header() {
             {services.map((service) => (
               <Link
                 key={service.slug}
-                href="/services"
+                href={`/services#${service.slug}`}
+                onClick={() => setActiveMenu(null)}
                 tabIndex={activeMenu === "systems" ? 0 : -1}
                 className="group flex flex-col gap-3 bg-canvas p-5 transition-colors duration-200 hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus"
               >
@@ -426,7 +427,7 @@ export function Header() {
                   {services.map((service) => (
                     <Link
                       key={service.slug}
-                      href="/services"
+                      href={`/services#${service.slug}`}
                       onClick={() => setIsDrawerOpen(false)}
                       className="flex min-h-11 items-center py-2 text-sm text-muted transition-colors duration-200 hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus"
                     >

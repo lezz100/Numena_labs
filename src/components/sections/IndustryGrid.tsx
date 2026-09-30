@@ -1,10 +1,6 @@
 import { CardGrid } from "@/components/ui/CardGrid";
 import { FeatureCard } from "@/components/ui/FeatureCard";
-import { industries } from "@/data/industries";
-
-const deskStatus: Record<string, string> = {
-  caredesk: "Built on AfyaHero · Live",
-};
+import { defaultDeskStatus, industries } from "@/data/industries";
 
 export function IndustryGrid() {
   return (
@@ -19,7 +15,7 @@ export function IndustryGrid() {
               tagline={industry.tagline}
               items={industry.features}
               href={`/industries/${industry.slug}`}
-              status={deskStatus[industry.slug] ?? "[STATUS PLACEHOLDER]"}
+              status={industry.status ?? defaultDeskStatus}
             />
           ))}
         </CardGrid>

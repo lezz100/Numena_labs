@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageHero } from "@/components/sections/PageHero";
@@ -169,31 +170,37 @@ export default async function CaseStudyPage(
         </div>
       </section>
 
-      {/* Screenshots placeholder */}
-      <section className="border-b border-border bg-surface">
-        <div className="mx-auto w-full max-w-[var(--content-max)] px-[var(--page-gutter)] py-[var(--space-section)]">
-          <Reveal>
-            <SectionIntro
-              eyebrow="Screenshots"
-              title="The system in use."
-              intro="Screenshots will be published here once production images are available."
-              className="mb-10"
-            />
-          </Reveal>
-          <Reveal delay={80}>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {Array.from({ length: 3 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="flex aspect-video items-center justify-center border border-dashed border-border text-sm text-muted/50"
-                >
-                  Screenshot {i + 1}
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
+      {study.screenshots && study.screenshots.length > 0 && (
+        <section className="border-b border-border bg-surface">
+          <div className="mx-auto w-full max-w-[var(--content-max)] px-[var(--page-gutter)] py-[var(--space-section)]">
+            <Reveal>
+              <SectionIntro
+                eyebrow="Screenshots"
+                title="The system in use."
+                className="mb-10"
+              />
+            </Reveal>
+            <Reveal delay={80}>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {study.screenshots.map((shot) => (
+                  <figure
+                    key={shot.src}
+                    className="relative aspect-video overflow-hidden border border-border"
+                  >
+                    <Image
+                      src={shot.src}
+                      alt={shot.alt}
+                      fill
+                      sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
+                      className="object-cover"
+                    />
+                  </figure>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
 
       {/* Results — only when resultsPublished is true */}
       {study.resultsPublished && (

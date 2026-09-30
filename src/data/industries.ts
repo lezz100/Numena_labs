@@ -4,7 +4,10 @@ export type Industry = {
   tagline: string;
   bestFor: string;
   features: string[];
+  status?: string;
 };
+
+export const defaultDeskStatus = "Scoped through a Systems Audit";
 
 export const industries: Industry[] = [
   {
@@ -13,6 +16,7 @@ export const industries: Industry[] = [
     tagline:
       "Clinics that rely on manual reminder calls send them inconsistently — patients who are not confirmed the day before often do not arrive, and the appointment slot is lost.",
     bestFor: "Clinics & Practices",
+    status: "Built on AfyaHero",
     features: [
       "WhatsApp Appointment Booking",
       "24-hour Confirmation & Reminders",
