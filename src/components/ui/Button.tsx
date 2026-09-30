@@ -16,7 +16,7 @@ type BaseProps = {
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "border border-accent bg-accent text-accent-foreground hover:border-accent-hover hover:bg-accent-hover",
+    "border border-accent bg-accent text-accent-foreground hover:border-accent-hover hover:bg-accent-hover hover:shadow-cta",
   secondary:
     "border border-border-strong bg-transparent text-foreground hover:border-accent hover:text-accent",
   ghost:
@@ -26,7 +26,7 @@ const variantClasses: Record<ButtonVariant, string> = {
 };
 
 const baseClasses =
-  "group inline-flex min-h-11 items-center gap-2 rounded-control px-5 py-3 text-sm font-medium whitespace-nowrap transition-[background-color,border-color,color,transform] duration-200 ease-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus active:translate-y-px aria-disabled:pointer-events-none aria-disabled:cursor-not-allowed aria-disabled:opacity-50";
+  "group inline-flex min-h-11 items-center gap-2 rounded-cta px-6 py-3 text-sm font-medium whitespace-nowrap transition-[background-color,border-color,color,transform,box-shadow] duration-200 ease-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus active:translate-y-px aria-disabled:pointer-events-none aria-disabled:cursor-not-allowed aria-disabled:opacity-50";
 
 function Arrow() {
   return (

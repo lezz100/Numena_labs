@@ -3,8 +3,8 @@ import { selectedWork } from "@/data/home";
 
 export function SelectedWork() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-      <div className="rounded-3xl border border-border bg-surface p-8 sm:p-12">
+    <section className="mx-auto max-w-[var(--content-max)] px-[var(--page-gutter)] py-[var(--space-section)]">
+      <div className="rounded-panel border border-border bg-surface p-8 sm:p-12">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
           {selectedWork.eyebrow}
         </p>

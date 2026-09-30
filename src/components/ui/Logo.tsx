@@ -9,29 +9,10 @@ export function LogoMark({ className = "h-8 w-8" }: { className?: string }) {
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      <defs>
-        <linearGradient id="numena-mark" x1="0" y1="0" x2="100" y2="100">
-          <stop offset="0%" stopColor="#E9D5FF" />
-          <stop offset="50%" stopColor="#818CF8" />
-          <stop offset="100%" stopColor="#4F46E5" />
-        </linearGradient>
-      </defs>
-      <path
-        d="M50 6C50 6 58 34 50 50C42 34 50 6 50 6Z"
-        fill="url(#numena-mark)"
-      />
-      <path
-        d="M94 50C94 50 66 58 50 50C66 42 94 50 94 50Z"
-        fill="url(#numena-mark)"
-      />
-      <path
-        d="M50 94C50 94 42 66 50 50C58 66 50 94 50 94Z"
-        fill="url(#numena-mark)"
-      />
-      <path
-        d="M6 50C6 50 34 42 50 50C34 58 6 50 6 50Z"
-        fill="url(#numena-mark)"
-      />
+      <path d="M50 6C50 6 58 34 50 50C42 34 50 6 50 6Z" fill="#b7c87c" />
+      <path d="M94 50C94 50 66 58 50 50C66 42 94 50 94 50Z" fill="#b7c87c" />
+      <path d="M50 94C50 94 42 66 50 50C58 66 50 94 50 94Z" fill="#b7c87c" />
+      <path d="M6 50C6 50 34 42 50 50C34 58 6 50 6 50Z" fill="#b7c87c" />
     </svg>
   );
 }

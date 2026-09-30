@@ -3,23 +3,16 @@ import { primaryCta } from "@/data/navigation";
 
 export function CtaBanner() {
   return (
-    <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-8">
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary via-secondary to-background p-10 sm:p-14">
-        <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(50% 80% at 90% 10%, rgba(96,165,250,0.35) 0%, transparent 70%)",
-          }}
-          aria-hidden="true"
-        />
+    <section className="mx-auto max-w-[var(--content-max)] px-[var(--page-gutter)] pb-[var(--space-section)]">
+      <div className="relative overflow-hidden rounded-panel bg-gradient-to-br from-primary via-secondary to-background p-10 sm:p-14">
         <div className="relative flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
           <div>
-            <h2 className="text-2xl font-bold text-white sm:text-3xl">
-              Let&apos;s build your competitive advantage.
+            <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
+              Start by seeing the problem clearly.
             </h2>
-            <p className="mt-2 max-w-md text-white/80">
-              Start with a systems audit.
+            <p className="mt-2 max-w-md text-muted">
+              A free Systems Audit maps where manual work is accumulating and
+              what a connected system would change.
             </p>
           </div>
           <Button href={primaryCta.href} variant="light" showArrow>

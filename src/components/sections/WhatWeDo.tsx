@@ -3,7 +3,7 @@ import { whatWeDo } from "@/data/home";
 
 export function WhatWeDo() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+    <section className="mx-auto max-w-[var(--content-max)] px-[var(--page-gutter)] py-[var(--space-section)]">
       <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
@@ -34,7 +34,7 @@ export function WhatWeDo() {
           <Link
             key={item.slug}
             href="/services"
-            className="group flex flex-col justify-between rounded-2xl border border-border bg-surface p-6 transition-colors hover:border-primary/50"
+            className="group flex flex-col justify-between rounded-panel border border-border bg-surface p-6 transition-colors hover:border-accent/50"
           >
             <div>
               <h3 className="font-semibold text-foreground">{item.title}</h3>

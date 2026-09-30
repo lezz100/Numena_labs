@@ -17,7 +17,7 @@ export function PageHero({
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(50% 60% at 50% 0%, rgba(79,70,229,0.25) 0%, rgba(5,6,11,0) 70%)",
+            "radial-gradient(50% 60% at 50% 0%, rgb(183 200 124 / 0.1) 0%, transparent 70%)",
         }}
         aria-hidden="true"
       />

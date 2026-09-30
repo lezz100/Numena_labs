@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/PageHero";
+import { SystemsAudit } from "@/components/sections/SystemsAudit";
 import { Button } from "@/components/ui/Button";
 import { primaryCta } from "@/data/navigation";
 
 export const metadata: Metadata = {
-  title: "Pricing | Numena Labs",
+  title: "Free Systems Audit & Pricing",
   description:
-    "Every Numena Labs system is scoped to your business. Start with a free systems efficiency audit to get a custom roadmap and quote.",
+    "Numena Labs scopes every system to the specific workflows involved — no fixed packages. Every engagement starts with a free 30-minute Systems Audit that maps where manual work is accumulating before anything is proposed.",
 };
 
 const auditIncludes = [
-  "Detailed audit report of your current systems, strengths and weaknesses",
-  "Opportunity map of quick wins and high-impact areas",
-  "Custom roadmap with priorities, timelines and recommendations",
-  "ROI projection on leads, revenue, time saved and costs reduced",
-  "30-minute expert consultation walking through findings and next steps",
+  "A map of where manual work is accumulating — enquiries, follow-ups, reminders and coordination that currently depend on someone remembering",
+  "Identification of which gaps a connected system would address and which require a different approach",
+  "A prioritised starting point: the one area where a system would have the most immediate effect",
+  "A plain-language summary of what a system would involve, what it would not cover and what it would cost to build",
+  "All of the above delivered in a single 30-minute session — no second meeting required before you have answers.",
 ];
 
 export default function PricingPage() {
@@ -23,7 +24,7 @@ export default function PricingPage() {
       <PageHero
         eyebrow="Pricing"
         title="Every system is scoped to your business."
-        description="Numena Labs doesn't sell one-size-fits-all packages. Pricing depends on the systems you need, the channels you operate on and the scale of automation involved — so every engagement starts with a free audit, not a quote."
+        description="Numena Labs does not sell fixed packages. Pricing depends on the operational workflows involved, the channels the business uses and the scope of automation required — so every engagement starts with a free Systems Audit, not a quote."
       >
         <div className="mt-8">
           <Button href={primaryCta.href} showArrow>
@@ -32,33 +33,45 @@ export default function PricingPage() {
         </div>
       </PageHero>
 
-      <section className="mx-auto max-w-3xl px-6 py-20 lg:px-8">
-        <div className="rounded-3xl border border-border bg-surface p-8 sm:p-10">
-          <h2 className="text-2xl font-bold">
-            Free 30-Minute Systems Efficiency Audit
-          </h2>
-          <p className="mt-3 text-muted">
-            No obligation. Just clarity. We analyze your current systems,
-            workflows and marketing to show you exactly where you&apos;re
-            losing time, leads and money — and what it would take to fix it.
-          </p>
-          <ul className="mt-8 space-y-3">
-            {auditIncludes.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-sm text-muted">
-                <span aria-hidden="true" className="mt-0.5 text-accent">
-                  ✓
-                </span>
-                {item}
-              </li>
-            ))}
-          </ul>
-          <div className="mt-8">
-            <Button href={primaryCta.href} showArrow className="w-full justify-center">
-              {primaryCta.label}
-            </Button>
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-[var(--content-narrow)] px-[var(--page-gutter)] py-[var(--space-section)]">
+          <div className="rounded-panel border border-border bg-surface p-8 sm:p-10">
+            <h2 className="text-2xl font-bold">Free Systems Audit</h2>
+            <p className="mt-3 text-muted">
+              A single 30-minute conversation. We ask about how your business
+              handles enquiries, follow-up and daily work — then map where the
+              manual work is and present what we find before the call ends.
+            </p>
+            <ul className="mt-8 space-y-4">
+              {auditIncludes.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-3 text-sm text-muted"
+                >
+                  <span aria-hidden="true" className="mt-0.5 shrink-0 text-accent">
+                    ✓
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div className="mt-8">
+              <Button
+                href={primaryCta.href}
+                showArrow
+                className="w-full justify-center"
+              >
+                {primaryCta.label}
+              </Button>
+              <p className="mt-5 text-center text-xs text-muted">
+                Most focused implementations start from KES 5,000. The audit gives you a figure for your specific scope.
+              </p>
+            </div>
           </div>
         </div>
       </section>
+
+      <SystemsAudit />
     </>
   );
 }

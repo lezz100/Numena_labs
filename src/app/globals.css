@@ -33,15 +33,17 @@
   --space-6: 3rem;
   --space-7: 4.5rem;
   --space-8: 7rem;
-  --space-section: clamp(4.5rem, 8vw, 7rem);
+  --space-section: clamp(4.5rem, 9vw, 8.75rem);
   --page-gutter: clamp(1.25rem, 4vw, 3rem);
   --content-max: 90rem;
   --content-narrow: 48rem;
 
-  /* A compact, almost-square shape language. */
+  /* Near-square for inputs and cards; pill for primary CTAs. */
   --radius-none: 0;
   --radius-control-value: 0.25rem;
   --radius-panel-value: 0.25rem;
+  --radius-cta-value: 1.5rem;
+  --radius-image-value: 1.25rem;
 
   /* Semantic type roles. Space Grotesk remains supplied by next/font. */
   --type-display: clamp(3rem, 6vw, 5.75rem);
@@ -49,7 +51,7 @@
   --type-h2: clamp(2rem, 3.4vw, 3.25rem);
   --type-h3: clamp(1.35rem, 2vw, 1.75rem);
   --type-body-large: 1.125rem;
-  --type-body: 1rem;
+  --type-body: 1.0625rem;
   --type-body-small: 0.875rem;
   --type-label: 0.8125rem;
   --type-metadata: 0.75rem;
@@ -59,6 +61,13 @@
   --tracking-display: -0.045em;
   --tracking-heading: -0.03em;
   --tracking-label: 0.015em;
+
+  /* Motion */
+  --duration-fast: 150ms;
+  --duration-base: 200ms;
+  --duration-slow: 500ms;
+  --ease-out: ease-out;
+  --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @theme inline {
@@ -93,7 +102,15 @@
   --radius-panel: var(--radius-panel-value);
 
   --font-sans: var(--font-space-grotesk);
+  --font-display: var(--font-montserrat);
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+
+  --radius-cta: var(--radius-cta-value);
+  --radius-image: var(--radius-image-value);
+
+  --shadow-card: 0 4px 24px rgb(0 0 0 / 0.45);
+  --shadow-card-hover: 0 8px 32px rgb(0 0 0 / 0.60);
+  --shadow-cta: 0 8px 18px rgb(183 200 124 / 0.22);
 }
 
 html {
@@ -135,7 +152,8 @@ a:not([class]):hover {
 .type-h2,
 .type-h3 {
   color: var(--foreground);
-  font-weight: 600;
+  font-family: var(--font-display, var(--font-sans));
+  font-weight: 700;
 }
 
 .type-display {
@@ -307,15 +325,15 @@ a:not([class]):hover {
   }
 
   .scroll-reveal--up[data-ready="true"] {
-    transform: translateY(2rem);
+    transform: translateY(3rem);
   }
 
   .scroll-reveal--left[data-ready="true"] {
-    transform: translateX(-2.5rem);
+    transform: translateX(-3rem);
   }
 
   .scroll-reveal--right[data-ready="true"] {
-    transform: translateX(2.5rem);
+    transform: translateX(3rem);
   }
 
   .scroll-reveal[data-revealed="true"] {

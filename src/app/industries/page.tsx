@@ -1,37 +1,36 @@
 import type { Metadata } from "next";
 import { IndustryGrid } from "@/components/sections/IndustryGrid";
+import { PageHero } from "@/components/sections/PageHero";
 import { SystemsAudit } from "@/components/sections/SystemsAudit";
-import { EditorialHeading } from "@/components/ui/EditorialHeading";
-import { Section } from "@/components/ui/Section";
+import { SectionIntro } from "@/components/ui/SectionIntro";
 
 export const metadata: Metadata = {
-  title: "Desk Systems Catalogue | Numena Labs",
+  title: "Desk Systems for Clinics, Pharmacies, Hotels & Service Businesses",
   description:
-    "Explore Numena Desk systems, designed around the intake, workflows, follow-up and operational visibility needs of service businesses.",
+    "Seven systems shaped around specific East African service business contexts — CareDesk for clinics, PharmacyDesk, HospitalityDesk for hotels, ServiceDesk, EventDesk, BuildDesk and ProfessionalDesk for law firms and consultants.",
 };
 
 export default function IndustriesPage() {
   return (
     <>
-      <Section className="border-b border-border" grid="twelve">
-        <div className="md:col-span-12 lg:col-span-8">
-          <EditorialHeading
-            as="h1"
-            eyebrow="Desk systems catalogue"
-            title="Operating systems shaped around the work service businesses do every day."
-            description="Each Desk system starts with an industry context, then connects the intake, workflow, follow-up and visibility that work requires."
-          />
-        </div>
-      </Section>
+      <PageHero
+        eyebrow="Desk systems catalogue"
+        title="Operating systems shaped around the work service businesses do every day."
+        description="Each Desk system starts with an industry context, then connects the intake, workflow, follow-up and visibility that work requires."
+      />
+
       <IndustryGrid />
-      <Section className="border-b border-border" grid="twelve">
-        <div className="md:col-span-12 lg:col-span-7">
-          <EditorialHeading
-            title="A repeatable system framework, tailored to the operational context."
-            description="The catalogue describes the workflow scope currently defined for each Desk system. A Systems Audit helps identify the right starting point for a specific business."
+
+      <div className="border-b border-border bg-surface">
+        <div className="mx-auto w-full max-w-[var(--content-max)] px-[var(--page-gutter)] py-[var(--space-section)]">
+          <SectionIntro
+            eyebrow="The framework"
+            title="A repeatable system framework, tailored to the business context."
+            intro="The catalogue describes the workflow scope currently defined for each Desk system. A Systems Audit helps identify the right starting point for a specific business."
           />
         </div>
-      </Section>
+      </div>
+
       <SystemsAudit />
     </>
   );

@@ -47,7 +47,6 @@ export function CaseStudyFeature() {
               ))}
             </ul>
           </div>
-          <p className="mt-8 border-t border-border pt-4 text-xs leading-relaxed text-muted">Interface evidence is being prepared. This workflow summary reflects the published AfyaHero system scope.</p>
         </div>
       </Reveal>
     </Section>

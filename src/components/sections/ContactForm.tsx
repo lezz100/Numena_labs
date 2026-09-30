@@ -43,7 +43,7 @@ export function ContactForm() {
     return (
       <div
         role="status"
-        className="rounded-2xl border border-border bg-surface p-8 text-center"
+        className="rounded-panel border border-border bg-surface p-8 text-center"
       >
         <h3 className="text-lg font-semibold text-foreground">
           Message sent.
@@ -70,7 +70,7 @@ export function ContactForm() {
             required
             minLength={2}
             maxLength={100}
-            className="mt-2 w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:border-primary"
+            className="mt-2 w-full rounded-control border border-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:border-primary"
           />
         </div>
         <div>
@@ -83,7 +83,7 @@ export function ContactForm() {
             type="email"
             required
             maxLength={200}
-            className="mt-2 w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:border-primary"
+            className="mt-2 w-full rounded-control border border-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:border-primary"
           />
         </div>
       </div>
@@ -98,7 +98,7 @@ export function ContactForm() {
             name="phone"
             type="tel"
             maxLength={30}
-            className="mt-2 w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:border-primary"
+            className="mt-2 w-full rounded-control border border-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:border-primary"
           />
         </div>
         <div>
@@ -110,14 +110,14 @@ export function ContactForm() {
             name="business"
             type="text"
             maxLength={150}
-            className="mt-2 w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:border-primary"
+            className="mt-2 w-full rounded-control border border-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:border-primary"
           />
         </div>
       </div>
 
       <div>
         <label htmlFor="message" className="text-sm font-medium text-foreground">
-          How can we help?
+          Tell us about your business
         </label>
         <textarea
           id="message"
@@ -126,7 +126,8 @@ export function ContactForm() {
           minLength={10}
           maxLength={2000}
           rows={5}
-          className="mt-2 w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:border-primary"
+          placeholder="What kind of business do you run, and what's taking up your team's time — a few sentences is enough."
+          className="mt-2 w-full rounded-control border border-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:border-primary"
         />
       </div>
 
@@ -137,7 +138,7 @@ export function ContactForm() {
       </div>
 
       {status === "error" && (
-        <p role="alert" className="text-sm text-red-400">
+        <p role="alert" className="text-sm text-error">
           {errorMessage}
         </p>
       )}
@@ -145,7 +146,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full rounded-full bg-primary px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-primary-hover disabled:cursor-not-allowed disabled:opacity-60"
+        className="w-full min-h-11 rounded-cta bg-primary px-6 py-3 text-sm font-medium text-accent-foreground transition-colors hover:bg-primary-hover disabled:cursor-not-allowed disabled:opacity-60"
       >
         {status === "submitting" ? "Sending..." : "Send Message"}
       </button>

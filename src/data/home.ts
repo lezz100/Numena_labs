@@ -1,15 +1,15 @@
 export const proofItems = [
   {
-    title: "Intake that reaches the right workflow",
-    detail: "Enquiries, requests and appointments can be captured and routed with context.",
+    title: "Bookings handled without a staff member initiating",
+    detail: "A patient messages your clinic on WhatsApp. The system responds, collects their details and books the slot. Your receptionist sees the appointment — not the exchange that created it.",
   },
   {
-    title: "Follow-up built into daily operations",
-    detail: "Reminders and customer communication are designed into the process, not left to memory.",
+    title: "Reminders that go out on time, every time",
+    detail: "24-hour appointment reminders go out by SMS. A no-show triggers a follow-up. Neither requires anyone on your team to remember to send it.",
   },
   {
-    title: "Visibility for the people running the business",
-    detail: "Reporting and status information help teams see what needs attention.",
+    title: "One view of today's activity",
+    detail: "Open the reporting view to see today's bookings, confirmed appointments, no-shows and outstanding payments — without calling departments or pulling spreadsheets.",
   },
 ];
 
@@ -18,9 +18,9 @@ export const afyaHeroFeature = {
   industry: "Healthcare",
   title: "A hospital operating system for the work around care.",
   problem:
-    "Hospital teams need a connected way to coordinate appointments, records, billing, results and patient communication.",
+    "Hospital teams need one place to coordinate appointments, records, billing, results and patient communication.",
   system:
-    "Numena built AfyaHero as a hospital management system that brings those operational workflows into one platform.",
+    "Numena built AfyaHero as a hospital management system that brings those workflows into one platform.",
   workflow: [
     "Appointment booking and reminders",
     "Digital patient records and notes",
@@ -39,7 +39,7 @@ export const operationalOutcomes = [
       "Connect enquiry capture, qualification and follow-up so each request has a clear next action.",
   },
   {
-    title: "Daily operations",
+    title: "Daily coordination",
     problem:
       "Teams coordinate work across messages, spreadsheets and disconnected tools.",
     response:
@@ -57,15 +57,15 @@ export const operationalOutcomes = [
     problem:
       "Managers cannot reliably see what is happening across enquiries, work and customer activity.",
     response:
-      "Make useful operational information available where decisions are being made.",
+      "Make daily numbers — bookings, payments, no-shows — visible where decisions are being made.",
   },
 ];
 
 export const deliveryModel = [
   {
-    title: "Map the operational friction",
+    title: "Map where the manual work sits",
     description:
-      "Start with the manual work, broken follow-up and fragmented information that make daily operations harder.",
+      "Start with the manual work, broken follow-up and fragmented information that make daily work harder.",
   },
   {
     title: "Design the connected workflow",
@@ -75,7 +75,7 @@ export const deliveryModel = [
   {
     title: "Implement the operating system",
     description:
-      "Bring the practical tools, automation and operational information into one considered way of working.",
+      "Bring the practical tools, automation and daily information into one considered way of working.",
   },
   {
     title: "Support adoption",
@@ -87,7 +87,7 @@ export const deliveryModel = [
 export const systemsAudit = {
   title: "Find the work that is getting in the way.",
   description:
-    "A Systems Audit helps identify where manual work is accumulating, follow-up is breaking down and operational information is fragmented.",
+    "A Systems Audit helps identify where manual work is accumulating, follow-up is breaking down and daily information is fragmented.",
 };
 
 // Retained for the retired homepage section components. They are intentionally

@@ -21,12 +21,12 @@ export async function generateMetadata(
   const industry = getIndustry(slug);
 
   if (!industry) {
-    return { title: "Industry Not Found | Numena Labs" };
+    return { title: "Industry Not Found" };
   }
 
   return {
-    title: `${industry.name} | Numena Labs`,
-    description: industry.tagline,
+    title: `${industry.name} — ${industry.bestFor}`,
+    description: `${industry.tagline} Numena's ${industry.name} connects ${industry.features.slice(0, 3).map(f => f.charAt(0).toLowerCase() + f.slice(1)).join(", ")} for ${industry.bestFor.toLowerCase()} in Kenya and East Africa.`,
   };
 }
 
@@ -63,7 +63,7 @@ export default async function IndustryDetailPage(
       <Section className="border-b border-border" grid="twelve">
         <div className="md:col-span-12 lg:col-span-4">
           <EditorialHeading
-            title="Operational context"
+            title="System context"
             description="This catalogue entry outlines the workflow scope currently defined for this system."
           />
         </div>
