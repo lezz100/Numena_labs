@@ -47,9 +47,7 @@ export default function AboutPage() {
           <div className="grid gap-12 lg:grid-cols-2">
             <Reveal>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-                  Who we are
-                </p>
+                <h2 className="type-label text-accent">Who we are</h2>
                 <p className="mt-4 leading-relaxed text-muted">
                   Alila started Numena Labs after working closely with a healthcare
                   provider in Eldoret and seeing how much of the administrative work
@@ -68,9 +66,7 @@ export default function AboutPage() {
 
             <Reveal delay={80}>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-                  What we have built
-                </p>
+                <h2 className="type-label text-accent">What we have built</h2>
                 <div className="mt-4 border border-border bg-surface p-6">
                   <div className="flex items-start justify-between gap-4">
                     <p className="text-lg font-semibold text-foreground">

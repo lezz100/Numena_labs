@@ -11,7 +11,7 @@ export function NumenaSystem() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
               {numenaSystem.eyebrow}
             </p>
-            <h2 className="mt-3 text-2xl font-bold sm:text-3xl">
+            <h2 className="type-h2 mt-3">
               {numenaSystem.title}
             </h2>
           </Reveal>
