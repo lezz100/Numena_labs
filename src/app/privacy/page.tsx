@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/PageHero";
 import { contactDetails } from "@/data/navigation";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy | Numena Labs",
+export const metadata: Metadata = pageMetadata({
+  title: "Privacy Policy",
   description: "Numena Labs privacy policy — coming soon.",
-};
+  path: "/privacy",
+  noIndex: true,
+});
 
 export default function PrivacyPage() {
   return (

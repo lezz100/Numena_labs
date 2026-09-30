@@ -6,12 +6,14 @@ import { SystemsAudit } from "@/components/sections/SystemsAudit";
 import { WhyNumena } from "@/components/sections/WhyNumena";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionIntro } from "@/components/ui/SectionIntro";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "AI Automation & Operational Systems",
   description:
     "WhatsApp automation, business operations, M-Pesa billing and AI integration — built for clinics, pharmacies, hotels and service firms in Kenya and East Africa. Each system is shaped around how the business actually runs.",
-};
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (

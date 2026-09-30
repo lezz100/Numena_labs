@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { Footer } from "@/components/layout/Footer";
+import { siteName, siteUrl } from "@/lib/site";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -18,9 +19,6 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
-// Set NEXT_PUBLIC_SITE_URL in your .env.local when the domain is confirmed.
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://numenalabs.com";
-
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
@@ -32,15 +30,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_KE",
-    siteName: "Numena Labs",
-    url: siteUrl,
+    siteName,
   },
   twitter: {
     card: "summary_large_image",
   },
 };
 
-// Schema.org Organisation + LocalBusiness — update @id and url when domain is confirmed.
 const organizationSchema = {
   "@context": "https://schema.org",
   "@graph": [

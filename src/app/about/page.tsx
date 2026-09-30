@@ -6,12 +6,15 @@ import { CardGrid } from "@/components/ui/CardGrid";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionIntro } from "@/components/ui/SectionIntro";
 import { deliveryModel } from "@/data/home";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "About Numena Labs — Eldoret, Kenya",
+  absoluteTitle: true,
   description:
     "Numena Labs was founded in Eldoret by Alila after building AfyaHero — a hospital management system for a healthcare provider in Kenya. We design operational systems for service businesses across East Africa running on WhatsApp and M-Pesa.",
-};
+  path: "/about",
+});
 
 const beliefs = [
   {

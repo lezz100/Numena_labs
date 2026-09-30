@@ -5,6 +5,7 @@ import { SystemsAudit } from "@/components/sections/SystemsAudit";
 import { EditorialHeading } from "@/components/ui/EditorialHeading";
 import { Section } from "@/components/ui/Section";
 import { industries } from "@/data/industries";
+import { pageMetadata } from "@/lib/site";
 
 export function generateStaticParams() {
   return industries.map((industry) => ({ slug: industry.slug }));
@@ -24,10 +25,11 @@ export async function generateMetadata(
     return { title: "Industry Not Found" };
   }
 
-  return {
+  return pageMetadata({
     title: `${industry.name} — ${industry.bestFor}`,
-    description: `${industry.tagline} Numena's ${industry.name} connects ${industry.features.slice(0, 3).map(f => f.charAt(0).toLowerCase() + f.slice(1)).join(", ")} for ${industry.bestFor.toLowerCase()} in Kenya and East Africa.`,
-  };
+    description: `${industry.tagline} Numena's ${industry.name} connects ${industry.features.slice(0, 3).join(", ")} for ${industry.bestFor.toLowerCase()} in Kenya and East Africa.`,
+    path: `/industries/${industry.slug}`,
+  });
 }
 
 export default async function IndustryDetailPage(

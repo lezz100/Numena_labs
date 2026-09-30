@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/PageHero";
 import { contactDetails } from "@/data/navigation";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Careers | Numena Labs",
+export const metadata: Metadata = pageMetadata({
+  title: "Careers",
   description: "There are no open roles at Numena Labs right now.",
-};
+  path: "/careers",
+  noIndex: true,
+});
 
 export default function CareersPage() {
   return (

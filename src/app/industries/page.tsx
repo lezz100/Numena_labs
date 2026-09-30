@@ -4,12 +4,14 @@ import { PageHero } from "@/components/sections/PageHero";
 import { SystemsAudit } from "@/components/sections/SystemsAudit";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionIntro } from "@/components/ui/SectionIntro";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Desk Systems for Clinics, Pharmacies, Hotels & Service Businesses",
   description:
     "Seven systems shaped around specific East African service business contexts — CareDesk for clinics, PharmacyDesk, HospitalityDesk for hotels, ServiceDesk, EventDesk, BuildDesk and ProfessionalDesk for law firms and consultants.",
-};
+  path: "/industries",
+});
 
 export default function IndustriesPage() {
   return (

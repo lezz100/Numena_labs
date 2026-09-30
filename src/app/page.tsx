@@ -7,15 +7,15 @@ import { SystemDelivery } from "@/components/sections/SystemDelivery";
 import { SystemsAudit } from "@/components/sections/SystemsAudit";
 import { WhereWeWork } from "@/components/sections/WhereWeWork";
 import { WorksWith } from "@/components/sections/WorksWith";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: {
-    absolute:
-      "Numena Labs — Digital Systems for East African Service Businesses",
-  },
+export const metadata: Metadata = pageMetadata({
+  title: "Numena Labs — Digital Systems for East African Service Businesses",
+  absoluteTitle: true,
   description:
     "Numena Labs builds WhatsApp-first operating systems for clinics, pharmacies, hotels and service businesses across East Africa — connecting intake, SMS reminders, M-Pesa billing and daily follow-up into one system teams can run every day.",
-};
+  path: "/",
+});
 
 export default function Home() {
   return (

@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/PageHero";
 import { Button } from "@/components/ui/Button";
 import { primaryCta } from "@/data/navigation";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Resources | Numena Labs",
+export const metadata: Metadata = pageMetadata({
+  title: "Resources",
   description:
     "Guides, case studies and insights on AI automation and business systems from Numena Labs — coming soon.",
-};
+  path: "/resources",
+  noIndex: true,
+});
 
 export default function ResourcesPage() {
   return (

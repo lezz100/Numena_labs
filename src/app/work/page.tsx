@@ -4,12 +4,14 @@ import { SystemsAudit } from "@/components/sections/SystemsAudit";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionIntro } from "@/components/ui/SectionIntro";
 import { caseStudies } from "@/data/work";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Systems in Practice | Numena Labs",
+export const metadata: Metadata = pageMetadata({
+  title: "Systems in Practice",
   description:
     "Explore AfyaHero, a Numena hospital management system designed around operational workflows that support patient care.",
-};
+  path: "/work",
+});
 
 export default function WorkPage() {
   return (

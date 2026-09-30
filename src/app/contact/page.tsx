@@ -3,12 +3,14 @@ import { ContactForm } from "@/components/sections/ContactForm";
 import { PageHero } from "@/components/sections/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
 import { contactDetails } from "@/data/navigation";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Book a Free Systems Audit",
   description:
     "Book a free Systems Audit with Numena Labs in Eldoret, Kenya. Reach us on WhatsApp at +254 700 888 719 or email numenalabs@outlook.com. We serve clinics, pharmacies, hotels and service businesses across East Africa.",
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

@@ -7,6 +7,7 @@ import { SystemsAudit } from "@/components/sections/SystemsAudit";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionIntro } from "@/components/ui/SectionIntro";
 import { caseStudies } from "@/data/work";
+import { pageMetadata } from "@/lib/site";
 
 export function generateStaticParams() {
   return caseStudies.map((study) => ({ slug: study.slug }));
@@ -26,10 +27,11 @@ export async function generateMetadata(
     return { title: "Case Study Not Found" };
   }
 
-  return {
+  return pageMetadata({
     title: `${study.name}: ${study.title}`,
     description: `${study.description} Built by Numena Labs for a ${study.industry.toLowerCase()} provider in East Africa.`,
-  };
+    path: `/work/${study.slug}`,
+  });
 }
 
 export default async function CaseStudyPage(

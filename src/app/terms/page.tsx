@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/PageHero";
 import { contactDetails } from "@/data/navigation";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Terms of Service | Numena Labs",
+export const metadata: Metadata = pageMetadata({
+  title: "Terms of Service",
   description: "Numena Labs terms of service — coming soon.",
-};
+  path: "/terms",
+  noIndex: true,
+});
 
 export default function TermsPage() {
   return (

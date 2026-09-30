@@ -3,12 +3,14 @@ import { PageHero } from "@/components/sections/PageHero";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { primaryCta } from "@/data/navigation";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Free Systems Audit & Pricing",
   description:
     "Numena Labs scopes every system to the specific workflows involved — no fixed packages. Every engagement starts with a free 30-minute Systems Audit that maps where manual work is accumulating before anything is proposed.",
-};
+  path: "/pricing",
+});
 
 const auditIncludes = [
   "A map of where manual work is accumulating — enquiries, follow-ups, reminders and coordination that currently depend on someone remembering",
