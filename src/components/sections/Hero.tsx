@@ -3,7 +3,7 @@ import { LogoMark } from "@/components/ui/Logo";
 import { primaryCta, secondaryCta } from "@/data/navigation";
 
 const proofChips = [
-  { strong: "WhatsApp, SMS & M-Pesa", rest: " — connected" },
+  { strong: "WhatsApp, SMS & M-Pesa", rest: " — one platform" },
   { strong: null, rest: "Clinics, hotels, pharmacies & service firms" },
   { strong: "Free", rest: " 30-minute Systems Audit" },
 ];
@@ -12,27 +12,23 @@ const proofChips = [
 export function Hero() {
   return (
     <section className="border-b border-border">
-      <div className="mx-auto grid w-full max-w-[var(--content-max)] gap-12 px-[var(--page-gutter)] pb-[var(--space-7)] pt-16 lg:grid-cols-12 lg:items-center lg:gap-[var(--space-6)] lg:pb-[var(--space-8)] lg:pt-24">
+      <div className="mx-auto grid w-full max-w-[var(--content-max)] gap-10 px-[var(--page-gutter)] pb-[var(--space-7)] pt-12 lg:grid-cols-12 lg:items-center lg:gap-[var(--space-6)] lg:pb-[var(--space-8)] lg:pt-24">
 
         {/* ─── Left: text + proof chips + CTAs ─── */}
         <div className="lg:col-span-7">
-          <p className="homepage-reveal mb-6 font-display text-xs font-bold uppercase tracking-widest text-accent">
+          <p className="homepage-reveal mb-5 font-display text-xs font-bold uppercase tracking-widest text-accent">
             Digital systems studio · East Africa
           </p>
 
           <h1
-            className="homepage-reveal font-display text-[clamp(2.4rem,3.8vw,3.5rem)] font-bold leading-[1.04] tracking-[-0.04em] text-foreground"
+            className="homepage-reveal font-display text-[clamp(1.75rem,3.8vw,3.5rem)] font-bold leading-[1.06] tracking-[-0.04em] text-foreground"
             style={{ animationDelay: "80ms" }}
           >
-            Missed follow-ups. Forgotten reminders. Enquiries that slipped.
+            Missed bookings. Forgotten follow-ups. Enquiries that went nowhere.{" "}
+            <span className="text-accent">
+              One system handles all three.
+            </span>
           </h1>
-
-          <p
-            className="homepage-reveal mt-2 font-display text-[clamp(2.4rem,3.8vw,3.5rem)] font-bold leading-[1.04] tracking-[-0.04em] text-accent"
-            style={{ animationDelay: "130ms" }}
-          >
-            {"{ Operational problems. Operational solutions. }"}
-          </p>
 
           <p
             className="homepage-reveal type-body-large mt-8 max-w-[55ch] text-muted"
@@ -77,9 +73,9 @@ export function Hero() {
           </div>
         </div>
 
-        {/* ─── Right: logo panel ─── */}
+        {/* ─── Right: logo panel — hidden below lg ─── */}
         <figure
-          className="homepage-reveal relative isolate flex min-h-[30rem] items-center justify-center overflow-hidden border border-border bg-canvas lg:col-span-5"
+          className="homepage-reveal relative isolate hidden lg:flex lg:col-span-5 min-h-[30rem] items-center justify-center overflow-hidden border border-border bg-canvas"
           aria-hidden="true"
           style={{ animationDelay: "180ms" }}
         >
