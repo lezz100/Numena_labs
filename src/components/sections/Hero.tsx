@@ -8,28 +8,6 @@ const proofChips = [
   { strong: "Free", rest: " 30-minute Systems Audit" },
 ];
 
-const systemFlow = [
-  {
-    title: "Intake",
-    description:
-      "A WhatsApp enquiry arrives, gets logged and reaches the right person automatically.",
-  },
-  {
-    title: "Workflow",
-    description:
-      "The request becomes a task with a clear owner — no group chat, no missed handoff.",
-  },
-  {
-    title: "Follow-up",
-    description:
-      "A confirmation goes out. A reminder follows 24 hours later. No one had to initiate either.",
-  },
-  {
-    title: "Visibility",
-    description:
-      "A manager sees what came in, what is pending and what was not actioned.",
-  },
-];
 
 export function Hero() {
   return (
@@ -101,48 +79,24 @@ export function Hero() {
 
         {/* ─── Right: logo panel ─── */}
         <figure
-          className="hero-visual homepage-reveal relative isolate min-h-[30rem] overflow-hidden border border-border bg-canvas lg:col-span-5"
-          aria-labelledby="hero-workflow-title"
+          className="homepage-reveal relative isolate flex min-h-[30rem] items-center justify-center overflow-hidden border border-border bg-canvas lg:col-span-5"
+          aria-hidden="true"
           style={{ animationDelay: "180ms" }}
         >
-          {/* Centered logo mark + wordmark */}
-          <div className="absolute inset-0 flex items-center justify-center pb-40" aria-hidden="true">
-            <div className="relative flex flex-col items-center gap-5">
-              <div
-                className="absolute -inset-16 -z-10 rounded-full"
-                style={{ background: "radial-gradient(ellipse at center, rgb(183 200 124 / 0.10) 0%, transparent 68%)" }}
-              />
-              <LogoMark className="h-28 w-28" />
-              <div className="flex flex-col items-center gap-1 leading-none">
-                <span className="font-display text-2xl font-bold tracking-[0.12em] text-foreground">
-                  NUMENA
-                </span>
-                <span className="font-display text-[11px] font-medium tracking-[0.45em] text-muted">
-                  LABS
-                </span>
-              </div>
+          <div className="relative flex flex-col items-center gap-5">
+            <div
+              className="absolute -inset-20 -z-10 rounded-full"
+              style={{ background: "radial-gradient(ellipse at center, rgb(183 200 124 / 0.10) 0%, transparent 68%)" }}
+            />
+            <LogoMark className="h-28 w-28" />
+            <div className="flex flex-col items-center gap-1 leading-none">
+              <span className="font-display text-2xl font-bold tracking-[0.12em] text-foreground">
+                NUMENA
+              </span>
+              <span className="font-display text-[11px] font-medium tracking-[0.45em] text-muted">
+                LABS
+              </span>
             </div>
-          </div>
-          <span className="hero-signal" aria-hidden="true" />
-          <div className="hero-workflow absolute inset-x-5 bottom-5 z-10 border border-border-strong bg-canvas/95 p-5 sm:inset-x-7 sm:bottom-7 sm:p-6">
-            <p id="hero-workflow-title" className="type-label text-accent">
-              Operating system workflow
-            </p>
-            <ol
-              className="mt-5 grid gap-x-5 gap-y-5 sm:grid-cols-2"
-              aria-label="A connected operational workflow"
-            >
-              {systemFlow.map((step) => (
-                <li key={step.title} className="border-l border-border-strong pl-3">
-                  <p className="text-base font-medium text-foreground">
-                    {step.title}
-                  </p>
-                  <p className="mt-1 text-sm leading-relaxed text-muted">
-                    {step.description}
-                  </p>
-                </li>
-              ))}
-            </ol>
           </div>
         </figure>
       </div>
