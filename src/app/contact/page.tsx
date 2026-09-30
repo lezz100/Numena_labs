@@ -24,7 +24,7 @@ export default function ContactPage() {
       <section className="border-b border-border">
         <div className="mx-auto max-w-[var(--content-max)] px-[var(--page-gutter)] py-[var(--space-section)]">
           <Reveal className="grid gap-12 lg:grid-cols-[1fr_1.3fr]">
-            <div>
+            <div className="min-w-0">
               <p className="type-label text-accent">What happens on the call</p>
               <h2 className="type-h3 mt-3">Thirty minutes, and you leave with answers.</h2>
               <p className="mt-4 leading-relaxed text-muted">
@@ -78,7 +78,7 @@ export default function ContactPage() {
               </dl>
             </div>
 
-            <div className="rounded-panel border border-border bg-surface p-8">
+            <div className="min-w-0 rounded-panel border border-border bg-surface p-6 sm:p-8">
               <ContactForm />
             </div>
           </Reveal>

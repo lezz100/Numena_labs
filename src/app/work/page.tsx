@@ -40,7 +40,7 @@ export default function WorkPage() {
               <Link
                 key={study.slug}
                 href={`/work/${study.slug}`}
-                className="group grid gap-5 border border-border bg-canvas p-6 transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-1 hover:border-accent hover:shadow-card-hover focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus sm:p-8 md:grid-cols-[minmax(11rem,0.65fr)_minmax(0,1.35fr)_auto] md:items-end md:gap-10"
+                className="group grid gap-5 border border-border bg-canvas p-6 transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-1 hover:border-accent hover:shadow-card-hover focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus sm:p-8 md:grid-cols-[minmax(0,0.65fr)_minmax(0,1.35fr)_auto] md:items-end md:gap-10"
               >
                 <div>
                   <p className="type-label text-accent">{study.name}</p>

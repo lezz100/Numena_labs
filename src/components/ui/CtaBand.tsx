@@ -22,7 +22,7 @@ export function CtaBand({ eyebrow, title, description, cta }: CtaBandProps) {
               {description}
             </p>
           </div>
-          <Button href={cta.href} showArrow className="w-fit">
+          <Button href={cta.href} showArrow className="w-full sm:w-fit">
             {cta.label}
           </Button>
         </Reveal>

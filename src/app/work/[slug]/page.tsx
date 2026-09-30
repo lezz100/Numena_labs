@@ -221,7 +221,7 @@ export default async function CaseStudyPage(
                 {study.results.map((metric) => (
                   <li
                     key={metric.label}
-                    className="grid gap-3 border-b border-border py-6 sm:grid-cols-[1fr_auto] sm:items-start sm:gap-8"
+                    className="grid gap-3 border-b border-border py-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start sm:gap-8"
                   >
                     <div>
                       <p className="text-sm font-medium text-foreground">

@@ -23,7 +23,7 @@ export function NumenaSystem() {
               {numenaSystem.steps.map((step, index) => (
                 <li
                   key={step.title}
-                  className="grid grid-cols-[2rem_minmax(0,1fr)_minmax(0,2fr)] items-baseline gap-4 border-b border-border py-5 sm:gap-6"
+                  className="grid grid-cols-[2rem_1fr] items-baseline gap-x-4 gap-y-1.5 border-b border-border py-5 md:grid-cols-[2rem_minmax(0,1fr)_minmax(0,2fr)] md:gap-6"
                 >
                   <span className="text-xs font-semibold text-accent">
                     {String(index + 1).padStart(2, "0")}
@@ -31,7 +31,7 @@ export function NumenaSystem() {
                   <h3 className="text-sm font-semibold text-foreground">
                     {step.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-muted">
+                  <p className="text-sm leading-relaxed text-muted md:col-start-3">
                     {step.description}
                   </p>
                 </li>

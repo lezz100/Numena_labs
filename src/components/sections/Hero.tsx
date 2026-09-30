@@ -65,13 +65,13 @@ export function Hero() {
           </ul>
 
           <div
-            className="homepage-reveal mt-8 flex flex-wrap gap-3"
+            className="homepage-reveal mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap"
             style={{ animationDelay: "260ms" }}
           >
-            <Button href={primaryCta.href} showArrow>
+            <Button href={primaryCta.href} showArrow className="w-full sm:w-auto justify-center">
               {primaryCta.label}
             </Button>
-            <Button href={secondaryCta.href} variant="secondary" showArrow>
+            <Button href={secondaryCta.href} variant="secondary" showArrow className="w-full sm:w-auto justify-center">
               {secondaryCta.label}
             </Button>
           </div>
