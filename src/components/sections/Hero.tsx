@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import { LogoMark } from "@/components/ui/Logo";
 import { primaryCta, secondaryCta } from "@/data/navigation";
 
 const proofChips = [
@@ -99,20 +99,30 @@ export function Hero() {
           </div>
         </div>
 
-        {/* ─── Right: workflow visual ─── */}
+        {/* ─── Right: logo panel ─── */}
         <figure
-          className="hero-visual homepage-reveal relative isolate min-h-[30rem] overflow-hidden border border-border bg-surface lg:col-span-5"
+          className="hero-visual homepage-reveal relative isolate min-h-[30rem] overflow-hidden border border-border bg-canvas lg:col-span-5"
           aria-labelledby="hero-workflow-title"
           style={{ animationDelay: "180ms" }}
         >
-          <Image
-            src="/images/hero-operations.jpg"
-            alt="Two people reviewing work together at a table"
-            fill
-            priority
-            sizes="(min-width: 1024px) 38vw, 100vw"
-            className="hero-photo object-cover"
-          />
+          {/* Centered logo mark + wordmark */}
+          <div className="absolute inset-0 flex items-center justify-center pb-40" aria-hidden="true">
+            <div className="relative flex flex-col items-center gap-5">
+              <div
+                className="absolute -inset-16 -z-10 rounded-full"
+                style={{ background: "radial-gradient(ellipse at center, rgb(183 200 124 / 0.10) 0%, transparent 68%)" }}
+              />
+              <LogoMark className="h-28 w-28" />
+              <div className="flex flex-col items-center gap-1 leading-none">
+                <span className="font-display text-2xl font-bold tracking-[0.12em] text-foreground">
+                  NUMENA
+                </span>
+                <span className="font-display text-[11px] font-medium tracking-[0.45em] text-muted">
+                  LABS
+                </span>
+              </div>
+            </div>
+          </div>
           <span className="hero-signal" aria-hidden="true" />
           <div className="hero-workflow absolute inset-x-5 bottom-5 z-10 border border-border-strong bg-canvas/95 p-5 sm:inset-x-7 sm:bottom-7 sm:p-6">
             <p id="hero-workflow-title" className="type-label text-accent">
