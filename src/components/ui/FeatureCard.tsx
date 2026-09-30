@@ -24,7 +24,7 @@ export function FeatureCard({
         <p className="text-base font-semibold text-foreground transition-colors duration-200 group-hover:text-accent">
           {label}
         </p>
-        <div className="min-w-0 flex flex-col gap-1.5 sm:shrink-0 sm:items-end">
+        <div className="min-w-0 flex flex-col gap-1.5 sm:items-end">
           <p className="type-label text-muted break-words">{sector}</p>
           {status && (
             <p className="type-label text-muted/60 break-words">{status}</p>

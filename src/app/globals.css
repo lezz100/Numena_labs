@@ -339,9 +339,10 @@ a:not([class]):hover {
     transform: translateX(3rem);
   }
 
-  /* On narrow viewports the sideways slide pushes content off-screen.
-     Collapse left/right to the same upward motion used by --up. */
-  @media (max-width: 767px) {
+  /* Left/right slide only makes sense once the two-column desktop grid
+     is active (lg = 1024px). Below that, collapse to the up variant so
+     the horizontal slide cannot push content off-screen. */
+  @media (max-width: 1023px) {
     .scroll-reveal--left[data-ready="true"],
     .scroll-reveal--right[data-ready="true"] {
       transform: translateY(3rem);
