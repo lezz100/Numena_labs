@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/PageHero";
 import { SystemsAudit } from "@/components/sections/SystemsAudit";
 import { Button } from "@/components/ui/Button";
+import { Reveal } from "@/components/ui/Reveal";
 import { primaryCta } from "@/data/navigation";
 
 export const metadata: Metadata = {
@@ -35,7 +36,7 @@ export default function PricingPage() {
 
       <section className="border-b border-border">
         <div className="mx-auto max-w-[var(--content-narrow)] px-[var(--page-gutter)] py-[var(--space-section)]">
-          <div className="rounded-panel border border-border bg-surface p-8 sm:p-10">
+          <Reveal className="rounded-panel border border-border bg-surface p-8 sm:p-10">
             <h2 className="text-2xl font-bold">Free Systems Audit</h2>
             <p className="mt-3 text-muted">
               A single 30-minute conversation. We ask about how your business
@@ -67,7 +68,7 @@ export default function PricingPage() {
                 Most focused implementations start from KES 5,000. The audit gives you a figure for your specific scope.
               </p>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 

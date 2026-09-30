@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { PageHero } from "@/components/sections/PageHero";
+import { Reveal } from "@/components/ui/Reveal";
 import { contactDetails } from "@/data/navigation";
 
 export const metadata: Metadata = {
@@ -20,7 +21,7 @@ export default function ContactPage() {
 
       <section className="border-b border-border">
         <div className="mx-auto max-w-[var(--content-max)] px-[var(--page-gutter)] py-[var(--space-section)]">
-          <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr]">
+          <Reveal className="grid gap-12 lg:grid-cols-[1fr_1.3fr]">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
                 Reach us directly
@@ -59,7 +60,7 @@ export default function ContactPage() {
             <div className="rounded-panel border border-border bg-surface p-8">
               <ContactForm />
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
     </>

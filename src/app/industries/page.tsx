@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { IndustryGrid } from "@/components/sections/IndustryGrid";
 import { PageHero } from "@/components/sections/PageHero";
 import { SystemsAudit } from "@/components/sections/SystemsAudit";
+import { Reveal } from "@/components/ui/Reveal";
 import { SectionIntro } from "@/components/ui/SectionIntro";
 
 export const metadata: Metadata = {
@@ -23,11 +24,13 @@ export default function IndustriesPage() {
 
       <div className="border-b border-border bg-surface">
         <div className="mx-auto w-full max-w-[var(--content-max)] px-[var(--page-gutter)] py-[var(--space-section)]">
-          <SectionIntro
-            eyebrow="The framework"
-            title="A repeatable system framework, tailored to the business context."
-            intro="The catalogue describes the workflow scope currently defined for each Desk system. A Systems Audit helps identify the right starting point for a specific business."
-          />
+          <Reveal>
+            <SectionIntro
+              eyebrow="The framework"
+              title="A repeatable system framework, tailored to the business context."
+              intro="The catalogue describes the workflow scope currently defined for each Desk system. A Systems Audit helps identify the right starting point for a specific business."
+            />
+          </Reveal>
         </div>
       </div>
 

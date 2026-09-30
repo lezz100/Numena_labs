@@ -4,6 +4,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { ServiceGrid } from "@/components/sections/ServiceGrid";
 import { SystemsAudit } from "@/components/sections/SystemsAudit";
 import { WhyNumena } from "@/components/sections/WhyNumena";
+import { Reveal } from "@/components/ui/Reveal";
 import { SectionIntro } from "@/components/ui/SectionIntro";
 
 export const metadata: Metadata = {
@@ -24,11 +25,13 @@ export default function ServicesPage() {
       {/* How these fit together */}
       <div className="border-b border-border bg-surface">
         <div className="mx-auto w-full max-w-[var(--content-max)] px-[var(--page-gutter)] py-[var(--space-section)]">
-          <SectionIntro
-            eyebrow="How these fit together"
-            title="One connected system, not four separate tools."
-            intro="Each service area corresponds to a layer of how the business runs — communication, coordination, visibility and integration. Most engagements touch more than one layer, because the friction usually spans more than one part of the workflow."
-          />
+          <Reveal>
+            <SectionIntro
+              eyebrow="How these fit together"
+              title="One connected system, not four separate tools."
+              intro="Each service area corresponds to a layer of how the business runs — communication, coordination, visibility and integration. Most engagements touch more than one layer, because the friction usually spans more than one part of the workflow."
+            />
+          </Reveal>
         </div>
       </div>
 
