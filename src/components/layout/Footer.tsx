@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/ui/Logo";
 import { contactDetails, primaryCta } from "@/data/navigation";
 
@@ -29,12 +30,9 @@ export function Footer() {
               WhatsApp-first operating systems for clinics, hotels, pharmacies
               and service businesses across East Africa.
             </p>
-            <Link
-              href={primaryCta.href}
-              className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-accent transition-colors duration-200 hover:text-accent-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus"
-            >
-              {primaryCta.label} →
-            </Link>
+            <Button href={primaryCta.href} showArrow className="mt-6">
+              {primaryCta.label}
+            </Button>
           </div>
 
           {/* Navigation links */}

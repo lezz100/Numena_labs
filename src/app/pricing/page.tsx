@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/PageHero";
-import { SystemsAudit } from "@/components/sections/SystemsAudit";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { primaryCta } from "@/data/navigation";
@@ -71,8 +70,6 @@ export default function PricingPage() {
           </Reveal>
         </div>
       </section>
-
-      <SystemsAudit />
     </>
   );
 }

@@ -23,11 +23,30 @@ export default function ContactPage() {
         <div className="mx-auto max-w-[var(--content-max)] px-[var(--page-gutter)] py-[var(--space-section)]">
           <Reveal className="grid gap-12 lg:grid-cols-[1fr_1.3fr]">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-                Reach us directly
+              <p className="type-label text-accent">What happens on the call</p>
+              <h2 className="type-h3 mt-3">Thirty minutes, and you leave with answers.</h2>
+              <p className="mt-4 leading-relaxed text-muted">
+                We ask how enquiries reach you, who follows up and how payments
+                are collected, then map where manual work is piling up. We walk
+                you through AfyaHero so you can see a working system built for a
+                healthcare provider in Eldoret. Before the call ends you get a
+                prioritised starting point and a plain-language view of what a
+                system would involve and cost.
               </p>
 
-              <dl className="mt-8 space-y-4 text-sm">
+              <p className="type-label mt-10 text-accent">What to have ready</p>
+              <p className="mt-3 leading-relaxed text-muted">
+                A few sentences about your business and what is taking up your
+                team&apos;s time. No documents, no preparation beyond that.
+              </p>
+
+              <p className="mt-10 border-l border-accent pl-4 text-sm text-muted">
+                We reply within [RESPONSE TIME PLACEHOLDER].
+              </p>
+
+              <p className="type-label mt-10 text-accent">Reach us directly</p>
+
+              <dl className="mt-4 space-y-4 text-sm">
                 <div>
                   <dt className="font-medium text-foreground">Email</dt>
                   <dd>
