@@ -156,6 +156,7 @@ a:not([class]):hover {
   color: var(--foreground);
   font-family: var(--font-display, var(--font-sans));
   font-weight: 700;
+  overflow-wrap: anywhere;
 }
 
 .type-display {

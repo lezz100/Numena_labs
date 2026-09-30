@@ -25,10 +25,10 @@ export function PageHero({
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
           {eyebrow}
         </p>
-        <h1 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl">
+        <h1 className="mt-4 break-words text-[clamp(1.75rem,5vw,3rem)] font-bold leading-tight">
           {title}
         </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-muted">
+        <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
           {description}
         </p>
         {children}

@@ -54,7 +54,7 @@ export default function ContactPage() {
                   <dd>
                     <a
                       href={`mailto:${contactDetails.email}`}
-                      className="text-muted hover:text-accent"
+                      className="break-all text-muted hover:text-accent"
                     >
                       {contactDetails.email}
                     </a>
